@@ -1,6 +1,3 @@
-// ─── CLASE ABSTRACTA ───────────────────────────────────────────────────────────
-// Define la "plantilla" que todas las operaciones deben seguir.
-// No se puede instanciar directamente, solo heredar de ella.
 abstract class Operacion {
   abstract ejecutar(valor: number): number;
 }
@@ -17,7 +14,7 @@ class Duplicar extends Operacion {
   }
 }
 
-// Operacion 2: Sumar un número fijo (configurado al crear el objeto)
+// Operacion 2: Sumar un número fijo (configurado al crear el objetoo)
 class Sumar extends Operacion {
   private cantidad: number;
 
@@ -52,7 +49,7 @@ class RestarMitad extends Operacion {
 }
 
 
-// ─── PIPELINE (flujo de operaciones) ───────────────────────────────────────────
+// ─── PIPELINE (flujo de operaciones) 
 // Recibe un valor inicial y un arreglo de operaciones.
 // Ejecuta cada operación en orden, pasando el resultado al siguiente.
 function ejecutarPipeline(valorInicial: number, operaciones: Operacion[]): number {
@@ -66,7 +63,7 @@ function ejecutarPipeline(valorInicial: number, operaciones: Operacion[]): numbe
 }
 
 
-// ─── EJECUCIÓN PRINCIPAL ────────────────────────────────────────────────────────
+// ─── EJECUCIÓN PRINCIPAL 
 const operaciones: Operacion[] = [
   new Duplicar(),
   new Sumar(10),
